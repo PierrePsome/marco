@@ -1,0 +1,86 @@
+
+
+.contAbout {
+
+    @include flex ($direction: column);
+    width: 940px;
+    position:absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%);
+
+
+    img {
+        width: 940px;
+        margin-bottom: 100px;
+    }
+
+    .info {
+        @include flex ($align: flex-start)
+    }
+
+    p {
+        line-height: 30px;
+        font-size: 14px;
+    }
+
+    a {
+        line-height: 30px;
+        font-size: 14px;
+    }
+
+    .aAbout {
+        margin-top: 40px;
+        margin-bottom: 200px;
+
+        a:nth-of-type(2) {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .contAbout {
+
+        width: 85%;
+
+        img {
+            width: 100%;
+            margin-bottom: 100px;
+        }
+
+        .info {
+            @include flex ($direction: column, $align: flex-start)
+        }
+
+        .infoL {
+            width: 100%;
+        }
+
+        .infoR {
+            width: 100%;
+        }
+    
+        p {
+            line-height: 30px;
+            font-size: 14px;
+        }
+    
+        a {
+            line-height: 30px;
+            font-size: 14px;
+        }
+    
+        .aAbout {
+            margin-top: 40px;
+            margin-bottom: 200px;
+    
+            a:nth-of-type(2) {
+                margin-left: 20px;
+            }
+        }
+    
+    }
+    
+}

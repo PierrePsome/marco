@@ -1,0 +1,184 @@
+
+.projects {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    @include flex;
+}
+
+.cards {
+    width: 100%;
+    @include flex;
+    
+    div {
+        width: 25%;
+        @include flex ($direction: column);
+    }
+    
+    div:nth-of-type(1)::before {
+        position: absolute;
+        top:0;
+        left:0;
+        content: " ";
+        background: url("../img/annabelle.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 25%;
+        height: 100vh;
+        z-index: -1;
+        opacity: 0;
+        transition: .5s all;
+    }
+    
+    div:nth-of-type(1):hover::before {
+        opacity: 1;
+    }
+    
+    div:nth-of-type(2)::before {
+        position: absolute;
+        top:0;
+        left:25%;
+        content: " ";
+        background: url("../img/decathlon.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 25%;
+        height: 100vh;
+        z-index: -1;
+        opacity: 0;
+        transition: .5s all;
+    }
+    
+    div:nth-of-type(2):hover::before {
+        opacity: 1;
+    }
+    
+    div:nth-of-type(3)::before {
+        position: absolute;
+        top:0;
+        left:50%;
+        content: " ";
+        background: url("../img/eventoxtra-header.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 25%;
+        height: 100vh;
+        z-index: -1;
+        opacity: 0;
+        transition: .5s all;
+    }
+    
+    div:nth-of-type(3):hover::before {
+        opacity: 1;
+    }
+    
+    div:nth-of-type(4)::before {
+        position: absolute;
+        top:0;
+        left:75%;
+        content: " ";
+        background: url("../img/flako.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 25%;
+        height: 100vh;
+        z-index: -1;
+        opacity: 0;
+        transition: .5s all;
+    }
+    
+    div:nth-of-type(4):hover::before {
+        opacity: 1;
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .orange {
+        display: none;
+    }
+
+    .projects {
+        top: 900px;
+    }
+    
+    .cards {
+        width: 100%;
+        @include flex ($direction: column,);
+        
+        div {
+            width: 100%;
+            @include flex ($direction: column);
+            
+            h3 {
+                font-size: 60px;
+                margin: 0;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        div:nth-of-type(1) {
+            height: 80vh;
+            background: url("../img/annabelle.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        div:nth-of-type(2) {
+            height: 80vh;
+            background: url("../img/decathlon.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        div:nth-of-type(3) {
+            height: 80vh;
+            background: url("../img/eventoxtra-header.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        div:nth-of-type(4) {
+            height: 80vh;
+            background: url("../img/flako.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+
+
+
+        div:nth-of-type(1)::before {
+            display: none;
+        }
+        
+        div:nth-of-type(2)::before {
+            display: none;
+        }
+        
+        div:nth-of-type(3)::before {
+            display: none;
+        }
+        
+        div:nth-of-type(4)::before {
+            display: none;
+        }
+    
+    }
+    
+}

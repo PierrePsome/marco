@@ -1,0 +1,73 @@
+// animation
+
+@keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+
+
+  .animated {  
+    /* This section calls the slideInFromLeft animation we defined above */
+    position: absolute;
+    width: 100vw;
+    z-index: 500;
+    animation: 1s ease-in-out 0s 1 slide;
+    
+    background: rgb(24, 24, 24);
+    padding: 30px;
+    height: 100vh;
+
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes moveUp {
+    0% {
+      transform: translateY(10%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  .firstBox {
+    opacity: 0;
+    margin-left: -35%;
+    margin-top: -20%;
+    animation: .7s .5s 1 moveUp;
+
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes moveDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  .top-menu {
+    animation: .7s .5s 1 moveDown;
+
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }

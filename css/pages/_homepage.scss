@@ -1,0 +1,113 @@
+.firstBox {
+    @include flex;
+    width: 100%;
+
+    .less {
+
+        width: 50%;
+        @include flex ($direction: column, $align: flex-start, $justify: flex-start);
+
+        h1 {
+            font-size: 120px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            margin-top: 0px;
+        }
+
+        p {
+            font-style: italic;
+            font-size: 14px;
+        }
+    }
+
+    .explore {
+
+        width: 30%;
+
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+            font-size: 12px;
+        }
+    }
+}
+
+.orange {
+    position: fixed;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0px;
+    
+}
+
+@media screen and (max-width: 1024px) {
+
+    .firstBox {
+
+    
+        .less {
+    
+            h1 {
+                font-size: 80px;
+                font-weight: 500;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+    
+            p {
+                font-style: italic;
+                font-size: 14px;
+            }
+        }
+    
+        .explore {
+    
+            width: 30%;
+    
+            display: flex;
+            justify-content: flex-end;
+    
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 650px) {
+
+    .firstBox {
+
+    
+        .less {
+    
+            h1 {
+                font-size: 50px;
+                font-weight: 500;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+    
+            p {
+                font-style: italic;
+                font-size: 14px;
+            }
+        }
+    
+        .explore {
+    
+            width: 30%;
+    
+            display: flex;
+            justify-content: flex-end;
+    
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+    
+}
